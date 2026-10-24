@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ahdookeh Fashion — Preview</title>
+    <meta
+      name="description"
+      content="Website preview concept for Ahdookeh Fashion, plus-size Afrocentric womenswear in Surulere, Lagos."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,100&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --indigo: #1e1b4b;
+        --indigo-2: #2e2a6b;
+        --saffron: #f2a900;
+        --fuchsia: #c2185b;
+        --leaf: #1f7a5a;
+        --paper: #fffbf5;
+        --ink: #1a1630;
+        --muted: #5c5672;
+        --line: #e8dfd2;
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "Outfit", system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+      body {
+        font-family: var(--sans);
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.6;
+        font-size: 17px;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 3px solid var(--saffron);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      .wrap {
+        width: min(1120px, 100% - 32px);
+        margin-inline: auto;
+      }
+
+      /* Preview banner — keeps this from being mistaken for the official site */
+      .preview {
+        background: var(--saffron);
+        color: var(--indigo);
+        font-size: 14px;
+        text-align: center;
+        padding: 8px 16px;
+        font-weight: 500;
+      }
+
+      /* Nav */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 251, 245, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+        gap: 16px;
+      }
+      .logo {
+        font-family: var(--serif);
+        font-size: 26px;
+        font-weight: 700;
+        text-decoration: none;
+        font-variation-settings: "SOFT" 100;
+        color: var(--indigo);
+      }
+      .nav ul {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+      }
+      .nav ul a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
+      .nav ul a:hover {
+        color: var(--fuchsia);
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--leaf);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 13px 22px;
+        border-radius: 999px;
+        border: 0;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .btn:hover {
+        background: #17624a;
+      }
+      .btn svg {
+        width: 20px;
+        height: 20px;
+        flex: none;
+      }
+      .btn.small {
+        padding: 9px 16px;
+        font-size: 15px;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+      }
+      .btn.ghost:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      @media (max-width: 820px) {
+        .nav ul {
+          display: none;
+        }
+      }
+
+      /* Hero */
+      .hero {
+        background: var(--indigo);
+        color: #fff;
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 48px;
+        align-items: center;
+        padding: 72px 0 80px;
+      }
+      .hero h1 {
+        font-family: var(--serif);
+        font-weight: 600;
+        font-size: clamp(44px, 7vw, 88px);
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+        font-variation-settings: "SOFT" 100;
+      }
+      .hero p {
+        font-size: 19px;
+        color: #d6d3f0;
+        max-width: 46ch;
+        margin: 24px 0 32px;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .hero-art {
+        position: relative;
+        aspect-ratio: 4/5;
+        border-radius: 220px 220px 24px 24px;
+        overflow: hidden;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+      }
+      .hero-art svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .hero-art .tag {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        background: var(--paper);
+        color: var(--ink);
+        padding: 10px 14px;
+        border-radius: 14px;
+        font-size: 14px;
+        max-width: 80%;
+      }
+      .hero-art .tag strong {
+        display: block;
+        font-family: var(--serif);
+        font-size: 18px;
+      }
+      .facts {
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        color: #d6d3f0;
+        font-size: 15px;
+      }
+      .facts span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .facts i {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--saffron);
+        display: inline-block;
+      }
+      @media (max-width: 820px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          padding: 48px 0 56px;
+        }
+        .hero-art {
+          max-width: 420px;
+          width: 100%;
+          margin-inline: auto;
+        }
+      }
+
+      /* Sections */
+      section {
+        padding: 88px 0;
+      }
+      .head {
+        max-width: 640px;
+        margin-bottom: 40px;
+      }
+      .head h2 {
+        font-family: var(--serif);
+        font-size: clamp(32px, 4.5vw, 48px);
+        line-height: 1.08;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--indigo);
+      }
+      .head p {
+        color: var(--muted);
+        margin-top: 12px;
+      }
+
+      /* Collections */
+      .tabs {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+      .tab {
+        font: inherit;
+        font-weight: 500;
+        background: #fff;
+        border: 1.5px solid var(--line);
+        color: var(--ink);
+        padding: 9px 18px;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+      .tab[aria-selected="true"] {
+        background: var(--indigo);
+        color: #fff;
+        border-color: var(--indigo);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 28px;
+      }
+      .item .swatch {
+        aspect-ratio: 3/4;
+        border-radius: 120px 120px 16px 16px;
+        overflow: hidden;
+        position: relative;
+      }
+      .item .swatch svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .item .swatch .photo-note {
+        position: absolute;
+        inset: auto 12px 12px 12px;
+        background: rgba(255, 251, 245, 0.9);
+        font-size: 12px;
+        color: var(--muted);
+        padding: 6px 10px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .item h3 {
+        font-family: var(--serif);
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 16px;
+        color: var(--indigo);
+      }
+      .item .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4px;
+        gap: 12px;
+      }
+      .item .price {
+        color: var(--muted);
+      }
+      .item a.order {
+        font-weight: 600;
+        color: var(--leaf);
+        text-decoration: none;
+        font-size: 15px;
+      }
+      .item a.order:hover {
+        text-decoration: underline;
+      }
+      .item[hidden] {
+        display: none;
+      }
+
+      /* How ordering works — a real sequence, so numbers belong here */
+      .how {
+        background: #fff;
+        border-block: 1px solid var(--line);
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
+        counter-reset: s;
+      }
+      .step {
+        counter-increment: s;
+      }
+      .step::before {
+        content: counter(s);
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--saffron);
+        color: var(--indigo);
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      .step h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .step p {
+        color: var(--muted);
+        font-size: 16px;
+      }
+      @media (max-width: 820px) {
+        .steps {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 520px) {
+        .steps {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Size guide */
+      .sizes {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 48px;
+        align-items: start;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: #fff;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 440px;
+        font-size: 16px;
+      }
+      th,
+      td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+      }
+      th {
+        background: var(--indigo);
+        color: #fff;
+        font-weight: 500;
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+      tbody tr:nth-child(even) {
+        background: #fbf6ee;
+      }
+      .note {
+        font-size: 14px;
+        color: var(--muted);
+        margin-top: 12px;
+      }
+      /* Grid children default to min-width:auto, so the 440px table was stretching the whole page */
+      .sizes > * {
+        min-width: 0;
+      }
+      @media (max-width: 820px) {
+        .sizes {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Worldwide */
+      .world {
+        background: var(--fuchsia);
+        color: #fff;
+      }
+      .world .head h2 {
+        color: #fff;
+      }
+      .world .head p {
+        color: #fce4ee;
+      }
+      .ship {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .ship div {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 24px;
+      }
+      .ship strong {
+        font-family: var(--serif);
+        font-size: 24px;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .ship p {
+        color: #fce4ee;
+        font-size: 16px;
+      }
+      @media (max-width: 820px) {
+        .ship {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Visit */
+      .visit {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .visit dl {
+        display: grid;
+        gap: 18px;
+      }
+      .visit dt {
+        font-weight: 600;
+      }
+      .visit dd {
+        color: var(--muted);
+      }
+      .map {
+        aspect-ratio: 4/3;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+      .map iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      @media (max-width: 820px) {
+        .visit {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      footer {
+        background: var(--indigo);
+        color: #b9b5da;
+        padding: 40px 0;
+        font-size: 15px;
+      }
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      footer .logo {
+        color: #fff;
+        font-size: 22px;
+      }
+
+      /* Floating WhatsApp */
+      .float {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 30;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #25d366;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+      }
+      .float svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      /* Small phones (320–420px) */
+      .item .meta {
+        flex-wrap: wrap;
+      }
+      @media (max-width: 420px) {
+        body {
+          font-size: 16px;
+        }
+        .preview {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+        .nav {
+          height: 60px;
+        }
+        .logo {
+          font-size: 22px;
+        }
+        .nav .btn.small .label {
+          display: none;
+        }
+        .nav .btn.small {
+          padding: 10px;
+          width: 42px;
+          height: 42px;
+          justify-content: center;
+        }
+        section {
+          padding: 56px 0;
+        }
+        .hero-grid {
+          padding: 36px 0 44px;
+          gap: 32px;
+        }
+        .hero h1 {
+          font-size: 38px;
+        }
+        .hero p {
+          font-size: 17px;
+          margin: 18px 0 24px;
+        }
+        .hero-actions .btn {
+          width: 100%;
+          justify-content: center;
+        }
+        .facts {
+          gap: 12px 20px;
+          margin-top: 28px;
+          font-size: 14px;
+        }
+        .head {
+          margin-bottom: 28px;
+        }
+        .head h2 {
+          font-size: 30px;
+        }
+        .tabs {
+          gap: 8px;
+        }
+        .tab {
+          padding: 8px 14px;
+          font-size: 15px;
+        }
+        .grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 20px 14px;
+        }
+        .item .swatch {
+          border-radius: 80px 80px 12px 12px;
+        }
+        .item .swatch .photo-note {
+          font-size: 10px;
+          inset: auto 6px 6px 6px;
+          padding: 4px 6px;
+        }
+        .item h3 {
+          font-size: 17px;
+          margin-top: 10px;
+          line-height: 1.2;
+        }
+        .item .meta {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2px;
+        }
+        .item .price {
+          font-size: 14px;
+        }
+        .item a.order {
+          font-size: 14px;
+        }
+        th,
+        td {
+          padding: 10px 12px;
+          font-size: 15px;
+        }
+        .ship div {
+          padding: 20px;
+        }
+        .float {
+          width: 52px;
+          height: 52px;
+          right: 12px;
+          bottom: 12px;
+        }
+        footer .wrap {
+          flex-direction: column;
+          gap: 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Keep this banner until the business approves and the site goes live. -->
+    <div class="preview">
+      Website preview concept made for Ahdookeh Fashion by COLLINS OSAS. Not the
+      official site. Photos and prices are placeholders.
+    </div>
+
+    <header>
+      <div class="wrap nav">
+        <a class="logo" href="#top">Ahdookeh</a>
+        <ul>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#how">How to order</a></li>
+          <li><a href="#sizes">Size guide</a></li>
+          <li><a href="#visit">Visit us</a></li>
+        </ul>
+        <a
+          class="btn small"
+          data-wa="Hello Ahdookeh, I'd like to place an order."
+          href="#"
+          aria-label="Order on WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3Z"
+            />
+          </svg>
+          <span class="label">Order on WhatsApp</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" style="padding: 0">
+        <div class="wrap hero-grid">
+          <div>
+            <h1>Made for curves. Sewn in Lagos.</h1>
+            <p>
+              Bubu gowns, Ankara two-pieces, evening gowns and aso-ebi, cut for
+              plus-size women who want to walk into the room and be seen.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#collections">Shop the collections</a>
+              <a
+                class="btn ghost"
+                data-wa="Hello Ahdookeh, I'd like a custom outfit made to my measurements."
+                href="#"
+                >Order a custom piece</a
+              >
+            </div>
+            <div class="facts">
+              <span><i></i>Plus-size specialists</span>
+              <span><i></i>Custom tailoring</span>
+              <span><i></i>Ships worldwide</span>
+            </div>
+          </div>
+          <div class="hero-art">
+            <!-- Replace this SVG with a real campaign photo: <img src="hero.jpg" alt="..."> -->
+            <svg
+              viewBox="0 0 400 500"
+              preserveAspectRatio="xMidYMid slice"
+              aria-hidden="true"
+            >
+              <defs>
+                <pattern
+                  id="wax"
+                  width="80"
+                  height="80"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect width="80" height="80" fill="#F2A900" />
+                  <circle cx="40" cy="40" r="30" fill="#C2185B" />
+                  <circle cx="40" cy="40" r="18" fill="#1E1B4B" />
+                  <circle cx="40" cy="40" r="7" fill="#F2A900" />
+                  <circle cx="0" cy="0" r="12" fill="#1F7A5A" />
+                  <circle cx="80" cy="0" r="12" fill="#1F7A5A" />
+                  <circle cx="0" cy="80" r="12" fill="#1F7A5A" />
+                  <circle cx="80" cy="80" r="12" fill="#1F7A5A" />
+                </pattern>
+              </defs>
+              <rect width="400" height="500" fill="url(#wax)" />
+            </svg>
+            <div class="tag">
+              <strong>The Booboo</strong>Flowing bubu, sizes up to UK 32
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collections">
+        <div class="wrap">
+          <div class="head">
+            <h2>The collections</h2>
+            <p>
+              Every piece can be made in your size. Tap “Order on WhatsApp” and
+              we'll confirm fabric, fit and delivery.
+            </p>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Filter collections">
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="true"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              data-filter="bubu"
+            >
+              Bubu gowns
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              data-filter="two"
+            >
+              Two-piece sets
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              data-filter="evening"
+            >
+              Evening gowns
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              data-filter="aso"
+            >
+              Aso-ebi
+            </button>
+          </div>
+
+          <div class="grid" id="grid"></div>
+        </div>
+      </section>
+
+      <section id="how" class="how">
+        <div class="wrap">
+          <div class="head">
+            <h2>How ordering works</h2>
+            <p>
+              Whether you're in Surulere or Manchester, it takes four messages.
+            </p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <h3>Pick a style</h3>
+              <p>
+                Choose from the collections or send us a picture of what you
+                have in mind.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Send your size</h3>
+              <p>
+                Use our size guide, or send bust, waist, hip and length
+                measurements.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Confirm and pay</h3>
+              <p>We confirm fabric, price and delivery date before you pay.</p>
+            </div>
+            <div class="step">
+              <h3>Receive it</h3>
+              <p>
+                Delivered across Lagos, Nigeria and abroad, with updates along
+                the way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sizes">
+        <div class="wrap sizes">
+          <div class="head" style="margin-bottom: 0">
+            <h2>Find your size</h2>
+            <p>
+              Between sizes or want a perfect fit? Send your measurements and
+              we'll make it to you.
+            </p>
+            <p style="margin-top: 24px">
+              <a
+                class="btn"
+                data-wa="Hello Ahdookeh, I need help choosing my size."
+                href="#"
+                >Ask about sizing</a
+              >
+            </p>
+          </div>
+          <div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>UK size</th>
+                    <th>Bust (in)</th>
+                    <th>Waist (in)</th>
+                    <th>Hip (in)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>16</td>
+                    <td>42</td>
+                    <td>35</td>
+                    <td>45</td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>44</td>
+                    <td>37</td>
+                    <td>47</td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>46</td>
+                    <td>39</td>
+                    <td>49</td>
+                  </tr>
+                  <tr>
+                    <td>22</td>
+                    <td>48</td>
+                    <td>41</td>
+                    <td>51</td>
+                  </tr>
+                  <tr>
+                    <td>24</td>
+                    <td>50</td>
+                    <td>43</td>
+                    <td>53</td>
+                  </tr>
+                  <tr>
+                    <td>26</td>
+                    <td>52</td>
+                    <td>45</td>
+                    <td>55</td>
+                  </tr>
+                  <tr>
+                    <td>28+</td>
+                    <td colspan="3">Made to your measurements</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">
+              Sample chart for the preview. Replace with Ahdookeh's own
+              measurements.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="world">
+        <div class="wrap">
+          <div class="head">
+            <h2>From Bode Thomas to wherever you are</h2>
+            <p>
+              Customers order from across Nigeria and abroad. Here's what to
+              expect.
+            </p>
+          </div>
+          <div class="ship">
+            <div>
+              <strong>Lagos</strong>
+              <p>
+                Fast delivery anywhere in Lagos, or pick up from our Surulere
+                store.
+              </p>
+            </div>
+            <div>
+              <strong>Nigeria</strong>
+              <p>Nationwide delivery to every state.</p>
+            </div>
+            <div>
+              <strong>Worldwide</strong>
+              <p>
+                UK, US, Canada and beyond. Ask us for a shipping quote on
+                WhatsApp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="visit">
+        <div class="wrap visit">
+          <div>
+            <div class="head" style="margin-bottom: 24px">
+              <h2>Visit the store</h2>
+              <p>
+                Come in to see fabrics, get measured, or try on ready-to-wear
+                pieces.
+              </p>
+            </div>
+            <dl>
+              <div>
+                <dt>Address</dt>
+                <dd>34 Bode Thomas Street, Surulere, Lagos</dd>
+              </div>
+              <div>
+                <dt>WhatsApp and calls</dt>
+                <dd>+234 818 896 5783</dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd>ahdookehtailors@gmail.com</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="map">
+            <iframe
+              title="Map to Ahdookeh Fashion"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=34+Bode+Thomas+St,+Surulere,+Lagos&output=embed"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span class="logo">Ahdookeh</span>
+        <span>Plus-size Afrocentric fashion · Surulere, Lagos</span>
+      </div>
+    </footer>
+
+    <a
+      class="float"
+      data-wa="Hello Ahdookeh, I have a question."
+      href="#"
+      aria-label="Chat with Ahdookeh on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+        <path
+          d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3Z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      // Business WhatsApp number (international format, no +)
+      const WA = "2348188965783";
+      const waLink = (msg) =>
+        `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+
+      // Products — swap names, prices and add `img: "photo.jpg"` when you get real photos.
+      const products = [
+        {
+          cat: "bubu",
+          name: "The Booboo",
+          price: "From ₦45,000",
+          p: ["#F2A900", "#C2185B", "#1E1B4B"],
+        },
+        {
+          cat: "bubu",
+          name: "Adire Flow Bubu",
+          price: "From ₦38,000",
+          p: ["#2E2A6B", "#9FB4E8", "#FFFBF5"],
+        },
+        {
+          cat: "two",
+          name: "Ankara Wrap Set",
+          price: "From ₦42,000",
+          p: ["#1F7A5A", "#F2A900", "#C2185B"],
+        },
+        {
+          cat: "two",
+          name: "Peplum Two-Piece",
+          price: "From ₦40,000",
+          p: ["#C2185B", "#FFFBF5", "#1E1B4B"],
+        },
+        {
+          cat: "evening",
+          name: "Sequin Evening Gown",
+          price: "From ₦85,000",
+          p: ["#1E1B4B", "#F2A900", "#2E2A6B"],
+        },
+        {
+          cat: "evening",
+          name: "Off-Shoulder Gown",
+          price: "From ₦70,000",
+          p: ["#7A1240", "#F2A900", "#FFFBF5"],
+        },
+        {
+          cat: "aso",
+          name: "Aso-Ebi Lace Gown",
+          price: "Group pricing",
+          p: ["#F2A900", "#1F7A5A", "#FFFBF5"],
+        },
+        {
+          cat: "aso",
+          name: "Iro and Buba Set",
+          price: "Group pricing",
+          p: ["#1F7A5A", "#C2185B", "#F2A900"],
+        },
+      ];
+
+      // Placeholder "fabric" art so the preview looks finished before real photos arrive
+      const patterns = [
+        (a, b, c) =>
+          `<rect width="60" height="60" fill="${a}"/><circle cx="30" cy="30" r="22" fill="${b}"/><circle cx="30" cy="30" r="10" fill="${c}"/>`,
+        (a, b, c) =>
+          `<rect width="60" height="60" fill="${a}"/><path d="M0 30 Q15 0 30 30 T60 30" stroke="${b}" stroke-width="8" fill="none"/><circle cx="30" cy="48" r="6" fill="${c}"/>`,
+        (a, b, c) =>
+          `<rect width="60" height="60" fill="${a}"/><rect x="15" y="15" width="30" height="30" transform="rotate(45 30 30)" fill="${b}"/><circle cx="30" cy="30" r="7" fill="${c}"/>`,
+        (a, b, c) =>
+          `<rect width="60" height="60" fill="${a}"/><path d="M30 6 C45 18 45 42 30 54 C15 42 15 18 30 6Z" fill="${b}"/><circle cx="0" cy="0" r="9" fill="${c}"/><circle cx="60" cy="60" r="9" fill="${c}"/>`,
+      ];
+
+      const grid = document.getElementById("grid");
+      grid.innerHTML = products
+        .map((x, i) => {
+          const art = x.img
+            ? `<img src="${x.img}" alt="${x.name}" style="width:100%;height:100%;object-fit:cover">`
+            : `<svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="p${i}" width="60" height="60" patternUnits="userSpaceOnUse">${patterns[i % patterns.length](...x.p)}</pattern></defs><rect width="300" height="400" fill="url(#p${i})"/></svg><span class="photo-note">Product photo goes here</span>`;
+          return `<article class="item" data-cat="${x.cat}">
+      <div class="swatch">${art}</div>
+      <h3>${x.name}</h3>
+      <div class="meta"><span class="price">${x.price}</span>
+      <a class="order" href="${waLink(`Hello Ahdookeh, I'm interested in the ${x.name}. Is it available in my size?`)}" target="_blank" rel="noopener">Order on WhatsApp</a></div>
+    </article>`;
+        })
+        .join("");
+
+      // Filter tabs
+      document.querySelectorAll(".tab").forEach((t) =>
+        t.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab")
+            .forEach((o) => o.setAttribute("aria-selected", o === t));
+          const f = t.dataset.filter;
+          document
+            .querySelectorAll(".item")
+            .forEach((it) => (it.hidden = f !== "all" && it.dataset.cat !== f));
+        }),
+      );
+
+      // Wire up every WhatsApp button
+      document.querySelectorAll("[data-wa]").forEach((a) => {
+        a.href = waLink(a.dataset.wa);
+        a.target = "_blank";
+        a.rel = "noopener";
+      });
+    </script>
+  </body>
+</html>
