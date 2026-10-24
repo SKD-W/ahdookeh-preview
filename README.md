@@ -33,4 +33,4 @@ Open `index.html` in any browser. No install needed.
 
 ## Status
 
-Preview / proposal. Built by [Your Name].
+Preview / proposal. Built by COLLINS OSAS.
